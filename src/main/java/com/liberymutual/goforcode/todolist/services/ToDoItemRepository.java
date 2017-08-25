@@ -36,7 +36,7 @@ public class ToDoItemRepository {
 	public List<ToDoItem> getAll() {
 
 		if (items.size() == 0) {
-			try (FileReader reader = new FileReader("ToDo.csv")) {
+			try (FileReader reader = new FileReader("ToDoList.csv")) {
 				for (CSVRecord record : CSVFormat.DEFAULT.parse(reader).getRecords()) {
 
 					int id = Integer.parseInt(record.get(0));
